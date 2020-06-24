@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Framework\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\Orders\" />
+    <Folder Include="UI\Orders\ViewModels\" />
+    <Folder Include="UI\Orders\Views\" />
+    <Folder Include="Framework\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MyNewProject.Data\MyNewProject.Data.csproj" />
+    <ProjectReference Include="..\..\Core\MyNewProject.Domain\MyNewProject.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\MyNewProject.UseCases\MyNewProject.UseCases.csproj" />
+  </ItemGroup>
+</Project>
